@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jam Budget</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+        <link rel="manifest" href="Favicon/site.webmanifest">
+
+        <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="top">
+            <div class="budget-container">
+                <div class="budget-title">
+                    <h3>Available Budget:</h3>
+                </div>
+                <div class="income">
+                    <div class="income-text">Income:</div>
+                    <div class="income-right">0</div>
+                </div>
+                <div class="expenses">
+                    <div class="expense-text">Expenses:</div>
+                    <div class="expense-right">0</div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="calculate">
+            <form id="calc-form">
+            <input type="text" name="text" class="calc-text" placeholder="Description" maxlength="20" required>
+            <input type="number" class="calc-value" placeholder="Amount" onkeypress="return event.charCode >= 48" min="0" onsubmit="return false" required>
+            <select id="selector" onchange="this.className=this.options[this.selectedIndex].className" class="add">
+                <option class="add" value="add">+</option>
+                <option class="subtract" value="subtract">-</option>
+            </select>
+            <button class="validate" onclick="calc();return false" type="submit" >Submit</button>
+            </form>
+        </div>
+
+        <div class="results">
+            <div class="current-income-title">
+                <h1>Results:</h1>
+            </div>
+            <div class="current-results">
+                <ul class="result-list">
+                    <!-- <li>Hello</li> -->
+                </ul>
+            </div>
+        </div>
+        
+        
+        <script src="app.js"></script>
+    </body>
+</html>
