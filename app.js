@@ -34,7 +34,6 @@ function calc() {
     }
 }
 
-
 validateValue.addEventListener("click", function() {
     var newIncomeText = document.createElement("LI");
     newIncomeText.setAttribute("id", "listItem")
